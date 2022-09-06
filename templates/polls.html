@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Poll Listing</title>
+  </head>
+  <body>
+    <h1>All Polls</h1>
+    <ul>
+    {% for poll in polls %}
+      <li>
+        {{ poll }}
+      </li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
