@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
+from polls.models import Question
 
 def index(request):
-    polls = ["First poll", "Second poll", "Third poll"]
-    return render(request, 'polls.html', {'polls': polls})
+    questions = Question.objects.all()
+    print(questions)
+    return render(request, 'polls.html', {'questions': questions})
